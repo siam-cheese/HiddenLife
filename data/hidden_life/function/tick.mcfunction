@@ -1,4 +1,4 @@
-execute as @a[tag=!hl] run scoreboard players set @s HLives 3
+execute as @a[tag=!hl] run scoreboard players set @s HLives 300
 execute as @a[tag=!hl] run tag @s add hl
 
 execute as @a[scores={HLives=-2}] at @s run function hidden_life:returntodeath
@@ -53,9 +53,9 @@ execute as @a[tag=target,scores={deathTrigger=1..}] run tag @s remove target
 
 execute as @a[scores={hitMenAnim=2..}] run scoreboard players operation @s hitMenAnim -= #1 numbers
 title @a[scores={hitMenAnim=122}] times 20 100 20
-title @a[scores={hitMenAnim=120}] title {"text":".","color":"green"}
-title @a[scores={hitMenAnim=80}] title {"text":"..","color":"yellow"}
-title @a[scores={hitMenAnim=40}] title {"text":"...","color":"red"}
+title @a[scores={hitMenAnim=120}] title {"text":"You are.","color":"green"}
+title @a[scores={hitMenAnim=80}] title {"text":"You are..","color":"yellow"}
+title @a[scores={hitMenAnim=40}] title {"text":"You are...","color":"red"}
 
 execute as @a[scores={hitMenAnim=120}] at @s run playsound ui.button.click ambient @s ~ ~ ~
 execute as @a[scores={hitMenAnim=80}] at @s run playsound ui.button.click ambient @s ~ ~ ~
