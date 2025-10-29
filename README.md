@@ -2,11 +2,17 @@
 
 # Important Operator Commands:
 /function hidden_life:start
+
     Begins the session, randomizes peoples lives
+
 /function hidden_life:hitmen_start
+
     declares certain people hitmen you can customize the chance with
+
     /scoreboard players set #hitMenChance numbers <chance 1 - 100>
+
 /scoreboard players set <player> HLives <number of lives>
+
     sets a certain player to a life
 
 
