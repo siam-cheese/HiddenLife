@@ -8,7 +8,12 @@ gamerule keepInventory true
 gamerule doImmediateRespawn true
 gamerule showDeathMessages false
 
+scoreboard objectives add lagFallback dummy
+
+
+
 scoreboard players set spinRate numbers 1
+scoreboard players set #-5 numbers -5
 
 scoreboard objectives add lifeCount trigger
 scoreboard objectives add withDrawLife trigger

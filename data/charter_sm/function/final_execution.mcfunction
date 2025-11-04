@@ -1,6 +1,6 @@
 particle dust{color:[0.57,0.23,0.8],scale:4} ~ ~1 ~ .125 1 .125 100 1000 normal
 particle minecraft:flame ~ ~1 ~ .125 .125 .125 5 3000
-tellraw @a ["",{"selector":"@s","color":"dark_red"},{"text":" lost their final life.","color":"dark_red"}]
+tellraw @a ["",{"selector":"@s","color":"dark_red"},{"text":" was eliminated","color":"dark_red"}]
 
 summon minecraft:lightning_bolt ~ ~2 ~
 execute as @a[distance=..30] at @s run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~ 30 1

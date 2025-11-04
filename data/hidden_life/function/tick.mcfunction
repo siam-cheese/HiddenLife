@@ -23,8 +23,15 @@ scoreboard players set @a claimAssasinKill 0
 
 execute as @a[nbt={active_effects:[{"id":"minecraft:mining_fatigue","amplifier":24b}]}] at @s run function hidden_life:gain_life
 
-execute as @a[scores={HLives=0}] at @s run function hidden_life:returntodeath
-execute as @a[scores={HLives=0}] at @s run forceload remove ~ ~
+execute as @a[scores={HLives=0}] unless score @s lagFallback > #-5 numbers run scoreboard players set @s lagFallback 10
+execute as @a[scores={lagFallback=-5..}] run scoreboard players operation @s lagFallback -= #1 numbers
+
+
+execute as @a[scores={HLives=0,lagFallback=2}] run function hidden_life:returntodeath
+execute as @a[scores={HLives=0,lagFallback=1}] run function charter_sm:begin_execution
+execute as @a[scores={HLives=0,lagFallback=1}] run scoreboard players set @s HLives -5
+
+
 
 execute as @a[scores={deathTrigger=1..}] run scoreboard players operation @s HLives -= #1 numbers
 execute as @a[scores={deathTrigger=1..}] at @a run playsound block.end_gateway.spawn ambient @s ~ ~ ~ .5 1
