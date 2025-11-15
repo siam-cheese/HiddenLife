@@ -34,8 +34,8 @@ execute as @a[scores={HLives=0,lagFallback=1}] run scoreboard players set @s HLi
 
 
 execute as @a[scores={deathTrigger=1..}] run scoreboard players operation @s HLives -= #1 numbers
-execute as @a[scores={deathTrigger=1..}] at @a run playsound block.end_gateway.spawn ambient @s ~ ~ ~ .5 1
-execute as @a[scores={deathTrigger=1..}] at @a run playsound block.bell.use ambient @s ~ ~ ~ .5 1
+execute as @a[scores={deathTrigger=1..}] as @a at @s run playsound block.end_gateway.spawn ambient @s ~ ~ ~ .5 1
+execute as @a[scores={deathTrigger=1..}] as @a at @s run playsound block.bell.use ambient @s ~ ~ ~ .5 1
 
 
 execute as @a[scores={startRoll=0..}] run scoreboard players operation @s startRoll -= #1 numbers

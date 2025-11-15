@@ -1,5 +1,5 @@
 tag @s add self
-tag @a[scores={HLives=2..},tag=!self,limit=1] add targetTemp
+tag @a[scores={HLives=2..},tag=!self,limit=1,sort=random] add targetTemp
 tag @s remove self
 tag @a[tag=targetTemp] add target
 playsound entity.ravager.hurt ambient @s ~ ~ ~ 1 .5
